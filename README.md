@@ -14,9 +14,6 @@ Through this portal, the department can present company opportunities in an orga
 
 ## Key Features
 
-- Home dashboard with placement statistics, notices, quick links, and upcoming drives
-- Company listing page with search and filters for status and branch
-- Placement-drive details including:
   - Company name and industry
   - Job profile
   - Visit or drive date
@@ -24,18 +21,9 @@ Through this portal, the department can present company opportunities in an orga
   - Eligible branches
   - Minimum academic criteria
   - Apply action
-- Placement schedule page for upcoming recruitment drives
-- Student guidelines page with eligibility and participation information
-- Login and registration interface for students, companies, and administrators/TPO
-- About page describing the role of the Training and Placement Cell
-- Responsive frontend styled for an institutional placement portal
 
 ## Tech Stack
 
-- **Backend:** Python, Flask
-- **Frontend:** HTML5, CSS3, JavaScript
-- **Templating:** Jinja2 through Flask
-- **Fonts:** Google Fonts
 
 ## Project Structure
 
@@ -58,8 +46,6 @@ IET_Placement_Portal/
 
 ### Prerequisites
 
-- Python 3.9 or later
-- `pip`
 
 ### Installation
 
@@ -113,25 +99,15 @@ IET_Placement_Portal/
 
 ## Prototype Status
 
-This repository currently contains a presentation-ready frontend prototype. The company data, notices, statistics, and schedule entries are static demo content rendered through Flask templates.
+An IET Placement Portal prototype that helps the Training and Placement Cell approach companies and publish placement-drive details such as job profile, eligibility criteria, package, visit date, schedule, notices, and application links for students.
 
 Authentication, database persistence, real company onboarding, admin approval workflows, email notifications, and production application processing are planned for future development.
 
 ## Future Scope
 
-- Add a database for students, companies, drives, applications, and notices
-- Implement secure authentication and role-based access control
-- Allow companies to submit recruitment requirements through the portal
-- Add TPO approval and publishing workflows
-- Add student profiles, application tracking, and document uploads
-- Send email or portal notifications for new drives and deadlines
-- Add an admin dashboard for managing the complete placement cycle
 
 ## Intended Users
 
-- **Training and Placement Cell:** Approach companies, verify opportunities, and publish recruitment information
-- **Companies:** Share hiring requirements and campus-drive details
-- **Students:** View eligibility, dates, packages, and application information in one place
 
 ## Disclaimer
 
