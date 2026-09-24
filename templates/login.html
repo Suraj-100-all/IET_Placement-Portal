@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login – IET Placement Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="top-strip">
+  <span>IET Placement Portal — DDUGU Gorakhpur</span>
+  <div class="top-links"><a href="/">← Back to Home</a></div>
+</div>
+<header>
+  <div class="header-inner">
+    <div class="header-left">
+      <div class="logo-wrap">
+        <svg width="60" height="60" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="36" cy="36" r="34" fill="#7a1010" stroke="#c8a84b" stroke-width="2.5"/>
+          <circle cx="36" cy="36" r="26" fill="none" stroke="#c8a84b" stroke-width="1.2"/>
+          <ellipse cx="36" cy="16" rx="4" ry="7" fill="#FC0F1A"/>
+          <ellipse cx="36" cy="17" rx="2.5" ry="4.5" fill="#f5c842"/>
+          <rect x="34" y="22" width="4" height="10" rx="1.5" fill="#c8a84b"/>
+          <rect x="22" y="38" width="28" height="3" rx="1.5" fill="#c8a84b"/>
+          <rect x="24" y="43" width="24" height="2.5" rx="1.2" fill="#c8a84b" opacity="0.8"/>
+          <rect x="26" y="47" width="20" height="2" rx="1" fill="#c8a84b" opacity="0.6"/>
+          <path id="arc-top2" d="M 12,36 A 24,24 0 0,1 60,36" fill="none"/>
+          <text font-family="serif" font-size="5.5" fill="#c8a84b" font-weight="bold" letter-spacing="1.5">
+            <textPath href="#arc-top2" startOffset="8%">DDUGU · GORAKHPUR</textPath>
+          </text>
+        </svg>
+      </div>
+      <div class="header-title">
+        <span class="univ-name">Deen Dayal Upadhyaya Gorakhpur University</span>
+        <span class="dept-name">Institute of Information Technology</span>
+        <span class="portal-label">Training &amp; Placement Cell — Official Portal</span>
+      </div>
+    </div>
+  </div>
+</header>
+<nav>
+  <ul>
+    <li><a href="/">🏠 Home</a></li>
+    <li><a href="/companies">🏢 Companies</a></li>
+    <li><a href="/students">🎓 Students</a></li>
+    <li><a href="/schedule">📅 Schedule</a></li>
+    <li><a href="/about">ℹ️ About TPO</a></li>
+    <li><a href="/login" class="nav-cta active">Login / Register</a></li>
+  </ul>
+</nav>
+<div class="login-page">
+  <div class="login-box">
+    <div class="login-header">
+      <h2>Welcome to Placement Portal</h2>
+      <p>Institute of Information Technology, DDUGU Gorakhpur</p>
+    </div>
+    <div class="login-body">
+      <div class="role-tabs">
+        <div class="role-tab active" onclick="setRole('student', this)">🎓 Student</div>
+        <div class="role-tab" onclick="setRole('company', this)">🏢 Company</div>
+        <div class="role-tab" onclick="setRole('admin', this)">🔑 Admin</div>
+      </div>
+      <div id="loginForm">
+        <div class="form-group"><label>Email / University ID</label><input type="email" placeholder="Enter your email or roll number"></div>
+        <div class="form-group"><label>Password</label><input type="password" placeholder="Enter password"></div>
+        <div style="display:flex;justify-content:flex-end;margin-bottom:18px;"><a href="#" style="font-size:13px;color:#7a1010;font-weight:600;">Forgot Password?</a></div>
+        <button class="btn-submit" onclick="handleLogin()">Login →</button>
+        <div class="login-footer-text">New here? <a href="#" onclick="toggleRegister()">Register Now</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>IET Placement Portal</h4>
+      <p>Official placement portal of Institute of Information Technology, DDUGU, Gorakhpur – 273009, U.P.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/companies">Upcoming Companies</a></li>
+        <li><a href="/schedule">Placement Schedule</a></li>
+        <li><a href="/students">Student Guidelines</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>📧 placement@ietddugu.ac.in</p>
+      <p>🌐 www.ddugu.ac.in</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 IET, DDUGU Gorakhpur. All Rights Reserved.</div>
+</footer>
+<script>
+let currentRole = 'student';
+let isRegister = false;
+function setRole(role, el) {
+  currentRole = role;
+  document.querySelectorAll('.role-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+function handleLogin() { alert('Login functionality will be connected to backend.\n\nRole: ' + currentRole.toUpperCase()); }
+</script>
+</body>
+</html>

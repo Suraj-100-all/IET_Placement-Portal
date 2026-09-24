@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Companies – IET Placement Portal</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="top-strip">
+  <span>Accredited A++ by NAAC &nbsp;|&nbsp; Deen Dayal Upadhyaya Gorakhpur University</span>
+  <div class="top-links">
+    <a href="#">Help Desk</a>
+    <a href="/login" class="btn-login-top">Login / Register</a>
+  </div>
+</div>
+<header>
+  <div class="header-inner">
+    <div class="header-left">
+      <div class="logo-wrap">
+        <svg width="60" height="60" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="36" cy="36" r="34" fill="#7a1010" stroke="#c8a84b" stroke-width="2.5"/>
+          <circle cx="36" cy="36" r="26" fill="none" stroke="#c8a84b" stroke-width="1.2"/>
+          <ellipse cx="36" cy="16" rx="4" ry="7" fill="#FC0F1A"/>
+          <ellipse cx="36" cy="17" rx="2.5" ry="4.5" fill="#f5c842"/>
+          <rect x="34" y="22" width="4" height="10" rx="1.5" fill="#c8a84b"/>
+          <rect x="22" y="38" width="28" height="3" rx="1.5" fill="#c8a84b"/>
+          <rect x="24" y="43" width="24" height="2.5" rx="1.2" fill="#c8a84b" opacity="0.8"/>
+          <path id="arc-top3" d="M 12,36 A 24,24 0 0,1 60,36" fill="none"/>
+          <text font-family="serif" font-size="5.5" fill="#c8a84b" font-weight="bold" letter-spacing="1.5">
+            <textPath href="#arc-top3" startOffset="8%">DDUGU · GORAKHPUR</textPath>
+          </text>
+        </svg>
+      </div>
+      <div class="header-title">
+        <span class="univ-name">Deen Dayal Upadhyaya Gorakhpur University</span>
+        <span class="dept-name">Institute of Information Technology</span>
+        <span class="portal-label">Training &amp; Placement Cell — Official Portal</span>
+      </div>
+    </div>
+  </div>
+</header>
+<nav>
+  <ul>
+    <li><a href="/">🏠 Home</a></li>
+    <li><a href="/companies" class="active">🏢 Companies</a></li>
+    <li><a href="/students">🎓 Students</a></li>
+    <li><a href="/schedule">📅 Schedule</a></li>
+    <li><a href="/about">ℹ️ About TPO</a></li>
+    <li><a href="/login" class="nav-cta">Login / Register</a></li>
+  </ul>
+</nav>
+<div class="page-hero">
+  <h1>🏢 Placement Companies 2025–26</h1>
+  <p>All approved and upcoming companies visiting IET, DDUGU Gorakhpur for campus recruitment</p>
+</div>
+<div style="max-width:1200px;margin:0 auto;padding:18px 20px 0;">
+  <div class="filter-bar">
+    <label>Filter:</label>
+    <select onchange="filterCards(this.value, 'status')">
+      <option value="">All Status</option>
+      <option value="approved">Approved</option>
+      <option value="upcoming">Upcoming</option>
+    </select>
+    <select onchange="filterCards(this.value, 'branch')">
+      <option value="">All Branches</option>
+      <option value="cse">CSE</option>
+      <option value="it">IT</option>
+      <option value="ece">ECE</option>
+    </select>
+    <input type="text" placeholder="🔍 Search company..." oninput="searchCards(this.value)" style="min-width:200px;">
+  </div>
+</div>
+<div class="companies-grid" id="companiesGrid">
+  <div class="company-full-card" data-status="approved" data-branch="cse it">
+    <div class="cfc-header"><div class="cfc-logo tcs">TCS</div><div><h3>Tata Consultancy Services</h3><div class="cfc-type">IT / Software Services</div></div></div>
+    <div class="cfc-body">
+      <div class="cfc-row"><span>Visit Date</span><span>📅 April 25, 2026</span></div>
+      <div class="cfc-row"><span>Job Profile</span><span>Software Engineer</span></div>
+      <div class="cfc-row"><span>Package</span><span style="color:#2e7d32;font-weight:700;">₹7.0 LPA</span></div>
+      <div class="cfc-row"><span>Eligible Branches</span><span>CSE / IT</span></div>
+      <div class="cfc-row"><span>Min. Criteria</span><span>60% throughout, No backlogs</span></div>
+    </div>
+    <div class="cfc-footer"><span class="status-badge status-approved">✓ Approved</span><a href="/login" class="btn-small">Apply Now</a></div>
+  </div>
+  <div class="company-full-card" data-status="approved" data-branch="cse it ece">
+    <div class="cfc-header"><div class="cfc-logo infosys">INF</div><div><h3>Infosys Limited</h3><div class="cfc-type">IT / Consulting</div></div></div>
+    <div class="cfc-body">
+      <div class="cfc-row"><span>Visit Date</span><span>📅 May 3, 2026</span></div>
+      <div class="cfc-row"><span>Job Profile</span><span>Systems Engineer</span></div>
+      <div class="cfc-row"><span>Package</span><span style="color:#2e7d32;font-weight:700;">₹6.5 LPA</span></div>
+      <div class="cfc-row"><span>Eligible Branches</span><span>All B.Tech Branches</span></div>
+      <div class="cfc-row"><span>Min. Criteria</span><span>65% throughout, No active backlogs</span></div>
+    </div>
+    <div class="cfc-footer"><span class="status-badge status-approved">✓ Approved</span><a href="/login" class="btn-small">Apply Now</a></div>
+  </div>
+  <!-- More cards... -->
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>IET Placement Portal</h4>
+      <p>Official placement portal of Institute of Information Technology, DDUGU, Gorakhpur – 273009, U.P.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/schedule">Placement Schedule</a></li>
+        <li><a href="/students">Student Guidelines</a></li>
+        <li><a href="/about">About TPO Cell</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>📧 placement@ietddugu.ac.in</p>
+      <p>🌐 www.ddugu.ac.in</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 IET, DDUGU Gorakhpur. All Rights Reserved.</div>
+</footer>
+<script>
+function filterCards(val, type) {
+  document.querySelectorAll('.company-full-card').forEach(card => {
+    const status = card.dataset.status;
+    const branch = card.dataset.branch;
+    let show = true;
+    if (type === 'status' && val && status !== val) show = false;
+    if (type === 'branch' && val && !branch.includes(val)) show = false;
+    card.style.display = show ? '' : 'none';
+  });
+}
+function searchCards(val) {
+  document.querySelectorAll('.company-full-card').forEach(card => {
+    const name = card.querySelector('h3').textContent.toLowerCase();
+    card.style.display = name.includes(val.toLowerCase()) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IET Placement Portal – DDUGU Gorakhpur</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<!-- TOP STRIP -->
+<div class="top-strip">
+  <span>Accredited A++ by NAAC &nbsp;|&nbsp; Deen Dayal Upadhyaya Gorakhpur University</span>
+  <div class="top-links">
+    <a href="#">Help Desk</a>
+    <a href="#">Contact TPO</a>
+    <a href="/login" class="btn-login-top">Login / Register</a>
+  </div>
+</div>
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="header-left">
+      <div class="logo-wrap">
+        <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="36" cy="36" r="34" fill="#7a1010" stroke="#c8a84b" stroke-width="2.5"/>
+          <circle cx="36" cy="36" r="26" fill="none" stroke="#c8a84b" stroke-width="1.2"/>
+          <ellipse cx="36" cy="16" rx="4" ry="7" fill="#FC0F1A"/>
+          <ellipse cx="36" cy="17" rx="2.5" ry="4.5" fill="#f5c842"/>
+          <rect x="34" y="22" width="4" height="10" rx="1.5" fill="#c8a84b"/>
+          <rect x="22" y="38" width="28" height="3" rx="1.5" fill="#c8a84b"/>
+          <rect x="24" y="43" width="24" height="2.5" rx="1.2" fill="#c8a84b" opacity="0.8"/>
+          <rect x="26" y="47" width="20" height="2" rx="1" fill="#c8a84b" opacity="0.6"/>
+          <circle cx="20" cy="26" r="1.5" fill="#c8a84b"/>
+          <circle cx="52" cy="26" r="1.5" fill="#c8a84b"/>
+          <path id="arc-top" d="M 12,36 A 24,24 0 0,1 60,36" fill="none"/>
+          <text font-family="serif" font-size="5.5" fill="#c8a84b" font-weight="bold" letter-spacing="1.5">
+            <textPath href="#arc-top" startOffset="8%">DDUGU · GORAKHPUR</textPath>
+          </text>
+          <path id="arc-bot" d="M 14,42 A 24,24 0 0,0 58,42" fill="none"/>
+          <text font-family="serif" font-size="4.5" fill="#f5c842" letter-spacing="1">
+            <textPath href="#arc-bot" startOffset="12%">EST. 1957 · NAAC A++</textPath>
+          </text>
+        </svg>
+      </div>
+      <div class="header-title">
+        <span class="univ-name">Deen Dayal Upadhyaya Gorakhpur University</span>
+        <span class="dept-name">Institute of Information Technology</span>
+        <span class="portal-label">Training &amp; Placement Cell — Official Portal</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <svg width="140" height="80" viewBox="0 0 140 80" xmlns="http://www.w3.org/2000/svg" class="building-svg">
+        <rect width="140" height="80" fill="#f0f4ff" rx="8"/>
+        <rect x="20" y="28" width="100" height="46" fill="#c5d3e8"/>
+        <rect x="20" y="28" width="100" height="6" fill="#8a0000"/>
+        <polygon points="70,10 12,28 128,28" fill="#7a1010"/>
+        <rect x="30" y="34" width="8" height="40" fill="#b0bfd4"/>
+        <rect x="50" y="34" width="8" height="40" fill="#b0bfd4"/>
+        <rect x="82" y="34" width="8" height="40" fill="#b0bfd4"/>
+        <rect x="102" y="34" width="8" height="40" fill="#b0bfd4"/>
+        <rect x="35" y="40" width="10" height="12" rx="1" fill="#5b8bd4" opacity="0.8"/>
+        <rect x="55" y="40" width="10" height="12" rx="1" fill="#5b8bd4" opacity="0.8"/>
+        <rect x="75" y="40" width="10" height="12" rx="1" fill="#5b8bd4" opacity="0.8"/>
+        <rect x="95" y="40" width="10" height="12" rx="1" fill="#5b8bd4" opacity="0.8"/>
+        <rect x="60" y="56" width="20" height="18" rx="2" fill="#8a0000"/>
+        <rect x="68" y="60" width="4" height="8" rx="1" fill="#c8a84b"/>
+        <line x1="70" y1="2" x2="70" y2="12" stroke="#555" stroke-width="1.5"/>
+        <rect x="70" y="2" width="12" height="7" fill="#FC0F1A"/>
+        <text x="70" y="77" text-anchor="middle" font-family="serif" font-size="6" fill="#7a1010" font-weight="bold">IET — DDUGU</text>
+      </svg>
+    </div>
+  </div>
+</header>
+<nav>
+  <ul>
+    <li><a href="/" class="active">🏠 Home</a></li>
+    <li><a href="/companies">🏢 Companies</a></li>
+    <li><a href="/students">🎓 Students</a></li>
+    <li><a href="/schedule">📅 Schedule</a></li>
+    <li><a href="/about">ℹ️ About TPO</a></li>
+    <li><a href="/login" class="nav-cta">Login / Register</a></li>
+  </ul>
+</nav>
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Academic Year 2025–26</div>
+    <h1>IET Placement Portal</h1>
+    <p>Official Training & Placement Platform of Institute of Information Technology,<br>Deen Dayal Upadhyaya Gorakhpur University</p>
+    <div class="hero-btns">
+      <a href="/login?role=student" class="btn-primary">Student Login</a>
+      <a href="/login?role=company" class="btn-secondary">Company Register</a>
+      <a href="/companies" class="btn-outline">View Companies</a>
+    </div>
+  </div>
+</section>
+<div class="stats-bar">
+  <div class="stat"><span class="stat-num">120+</span><span class="stat-label">Companies Visited</span></div>
+  <div class="stat-div"></div>
+  <div class="stat"><span class="stat-num">850+</span><span class="stat-label">Students Placed</span></div>
+  <div class="stat-div"></div>
+  <div class="stat"><span class="stat-num">₹12 LPA</span><span class="stat-label">Highest Package</span></div>
+  <div class="stat-div"></div>
+  <div class="stat"><span class="stat-num">₹4.2 LPA</span><span class="stat-label">Average Package</span></div>
+  <div class="stat-div"></div>
+  <div class="stat"><span class="stat-num">18</span><span class="stat-label">Upcoming Drives</span></div>
+</div>
+<main class="main-grid">
+  <section class="card-section">
+    <div class="section-head">
+      <h2>📢 Upcoming Placement Drives</h2>
+      <a href="/companies" class="view-all">View All →</a>
+    </div>
+    <div class="company-cards">
+      <div class="company-card featured">
+        <div class="company-badge">Approved</div>
+        <div class="company-logo-box tcs">TCS</div>
+        <h3>Tata Consultancy Services</h3>
+        <div class="company-meta">
+          <span>📅 April 25, 2026</span>
+          <span>💼 Software Engineer</span>
+        </div>
+        <div class="company-pkg">Package: <strong>₹7.0 LPA</strong></div>
+        <div class="company-elig">Eligibility: B.Tech CSE/IT | 60% & above</div>
+        <a href="/companies" class="btn-apply">Apply Now</a>
+      </div>
+      <div class="company-card">
+        <div class="company-badge approved2">Approved</div>
+        <div class="company-logo-box infosys">INF</div>
+        <h3>Infosys Limited</h3>
+        <div class="company-meta">
+          <span>📅 May 3, 2026</span>
+          <span>💼 Systems Engineer</span>
+        </div>
+        <div class="company-pkg">Package: <strong>₹6.5 LPA</strong></div>
+        <div class="company-elig">Eligibility: B.Tech All Branches | 65% & above</div>
+        <a href="/companies" class="btn-apply">Apply Now</a>
+      </div>
+      <div class="company-card">
+        <div class="company-badge approved3">Approved</div>
+        <div class="company-logo-box wipro">WIP</div>
+        <h3>Wipro Technologies</h3>
+        <div class="company-meta">
+          <span>📅 May 10, 2026</span>
+          <span>💼 Project Engineer</span>
+        </div>
+        <div class="company-pkg">Package: <strong>₹5.5 LPA</strong></div>
+        <div class="company-elig">Eligibility: B.Tech CSE/IT/ECE | 60% & above</div>
+        <a href="/companies" class="btn-apply">Apply Now</a>
+      </div>
+    </div>
+  </section>
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h3 class="sidebar-title">📌 Notice Board</h3>
+      <ul class="notice-list">
+        <li class="notice-item new"><span class="notice-tag">NEW</span><a href="#">TCS Pre-Placement Talk – April 22, 2026</a></li>
+        <li class="notice-item"><span class="notice-tag imp">IMP</span><a href="#">Resume submission deadline – April 20</a></li>
+        <li class="notice-item"><a href="#">Infosys aptitude test syllabus released</a></li>
+        <li class="notice-item"><a href="#">Mock interview sessions – April 19 & 20</a></li>
+        <li class="notice-item"><a href="#">Wipro registration form open now</a></li>
+        <li class="notice-item"><a href="#">AMCAT score submission for MNCs</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <h3 class="sidebar-title">⚡ Quick Access</h3>
+      <div class="quick-btns">
+        <a href="/login?role=student" class="qbtn student">🎓 Student Portal</a>
+        <a href="/login?role=company" class="qbtn company">🏢 Company Portal</a>
+        <a href="/login?role=admin" class="qbtn admin">🔑 Admin / TPO</a>
+        <a href="/schedule" class="qbtn sched">📅 Drive Schedule</a>
+      </div>
+    </div>
+    <div class="sidebar-card contact-card">
+      <h3 class="sidebar-title">📞 Contact TPO</h3>
+      <div class="tpo-info">
+        <div class="tpo-avatar">TPO</div>
+        <div><p><strong>Training & Placement Officer</strong></p><p>IET, DDUGU Gorakhpur</p><p>📧 tpo@ietddugu.ac.in</p><p>📞 +91-551-XXXXXXX</p></div>
+      </div>
+    </div>
+  </aside>
+</main>
+<section class="how-section">
+  <h2>How the Portal Works</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-icon">1</div>
+      <h4>Company Registers</h4>
+      <p>Company receives invite from TPO/Professor or self-registers on the portal</p>
+    </div>
+    <div class="step-arrow">→</div>
+    <div class="step">
+      <div class="step-icon">2</div>
+      <h4>Admin Approves</h4>
+      <p>TPO reviews and approves the company profile and job details</p>
+    </div>
+    <div class="step-arrow">→</div>
+    <div class="step">
+      <div class="step-icon">3</div>
+      <h4>Students Notified</h4>
+      <p>All eligible students receive portal & email notification instantly</p>
+    </div>
+    <div class="step-arrow">→</div>
+    <div class="step">
+      <div class="step-icon">4</div>
+      <h4>Students Apply</h4>
+      <p>Students view company details and apply online through the portal</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>IET Placement Portal</h4>
+      <p>Official placement portal of Institute of Information Technology, Deen Dayal Upadhyaya Gorakhpur University, Gorakhpur – 273009, U.P.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/companies">Upcoming Companies</a></li>
+        <li><a href="/schedule">Placement Schedule</a></li>
+        <li><a href="/students">Student Guidelines</a></li>
+        <li><a href="/about">About TPO Cell</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>📧 placement@ietddugu.ac.in</p>
+      <p>🌐 www.ddugu.ac.in</p>
+      <p>📍 Civil Lines, Gorakhpur, UP – 273009</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 IET, DDUGU Gorakhpur. All Rights Reserved. | Designed for CSE258 – Software Engineering Lab</p>
+  </div>
+</footer>
+</body>
+</html>
